@@ -1,0 +1,17 @@
+# Default approvers for all code changes
+* @procter-gamble/eai_apigeex_platform @procter-gamble/cnf-gcpcl-its-eai-eng-sup @procter-gamble/eai @procter-gamble/cnf-gcpcl-its-eai-eng-gov
+
+## Workflows
+/.github/ @procter-gamble/eai_apigeex_platform
+
+## APIPROXY
+**/apiproxy/**/* @procter-gamble/gdsg-cdp-oc360-api-owners
+
+## SHAREDFLOWS
+**/sharedflowbundle/**/* @procter-gamble/gdsg-cdp-oc360-api-owners
+
+## CONFIGS
+**/apigee-x-config/**/* @procter-gamble/gdsg-cdp-oc360-api-owners
+
+## Custom
+/postman/ @procter-gamble/gdsg-cdp-oc360-api-owners

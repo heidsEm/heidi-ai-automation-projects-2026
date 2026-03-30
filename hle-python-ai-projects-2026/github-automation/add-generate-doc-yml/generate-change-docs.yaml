@@ -1,0 +1,20 @@
+name: Generate DevOps Change Document
+
+on:
+  pull_request:
+    branches:
+      - main
+      - nonprod
+      - dev
+    paths:
+      - 'config.json'
+      - 'policies/**.xml'
+      - 'schemas/**'
+
+jobs:
+  generate_change_doc:
+    name: Generate Change Documentation
+    uses: procter-gamble/eai-apim-platform-azure-internal/.github/workflows/reusable-operations-generate-change-doc.yaml@v2
+    with:
+      environment: ${{ github.base_ref == 'main' && 'prod' || github.base_ref }}
+    secrets: inherit

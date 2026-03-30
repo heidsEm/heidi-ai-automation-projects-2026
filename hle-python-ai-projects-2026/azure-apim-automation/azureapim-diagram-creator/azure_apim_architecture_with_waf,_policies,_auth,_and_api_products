@@ -1,0 +1,39 @@
+digraph "Azure APIM Architecture with WAF, Policies, Auth, and API Products" {
+	graph [fontcolor="#2D3436" fontname="Sans-Serif" fontsize=15 label="Azure APIM Architecture with WAF, Policies, Auth, and API Products" nodesep=0.60 pad=2.0 rankdir=LR ranksep=0.75 splines=ortho]
+	node [fixedsize=true fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 height=1.4 imagescale=true labelloc=b shape=box style=rounded width=1.4]
+	edge [color="#7B8894"]
+	bb7f2ceda0594d30bfc0620f5ec476c7 [label=Client height=1.9 image="C:\Users\heidi.embat\OneDrive - Accenture\Desktop\Python\mix-proxypath\venv\Lib\site-packages\resources/onprem/client\users.png" shape=none]
+	subgraph "cluster_Azure API Management" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="Azure API Management" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"2d175c1fd0624605a984fb98dacfd2b7" [label="API Management" height=1.9 image="C:\Users\heidi.embat\OneDrive - Accenture\Desktop\Python\mix-proxypath\venv\Lib\site-packages\resources/azure/integration\api-management.png" shape=none]
+		subgraph "cluster_APIM Policies" {
+			graph [bgcolor="#EBF3E7" fontname="Sans-Serif" fontsize=12 label="APIM Policies" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+			"9f145a223db7401c9ed7443dd69109c0" [label="Rate Limiting" height=1.9 image="C:\Users\heidi.embat\OneDrive - Accenture\Desktop\Python\mix-proxypath\venv\Lib\site-packages\resources/generic/blank\blank.png" shape=none]
+			"75d6f340998d49e8adb4449de31171ee" [label="API Products" height=1.9 image="C:\Users\heidi.embat\OneDrive - Accenture\Desktop\Python\mix-proxypath\venv\Lib\site-packages\resources/generic/blank\blank.png" shape=none]
+		}
+		subgraph "cluster_APIM Authentication" {
+			graph [bgcolor="#EBF3E7" fontname="Sans-Serif" fontsize=12 label="APIM Authentication" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+			a3c455aa328b4fe7b831e3bfa2ed866d [label="Auth Handler" height=1.9 image="C:\Users\heidi.embat\OneDrive - Accenture\Desktop\Python\mix-proxypath\venv\Lib\site-packages\resources/generic/blank\blank.png" shape=none]
+			"86f51fc68f3e45ae9b5aa3ffeb0ab66b" [label="Azure AD" height=1.9 image="C:\Users\heidi.embat\OneDrive - Accenture\Desktop\Python\mix-proxypath\venv\Lib\site-packages\resources/azure/identity\active-directory.png" shape=none]
+		}
+	}
+	subgraph "cluster_Backend Services" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="Backend Services" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"42deef42087a43e89eab2eff2fab735a" [label="Function App" height=1.9 image="C:\Users\heidi.embat\OneDrive - Accenture\Desktop\Python\mix-proxypath\venv\Lib\site-packages\resources/azure/compute\function-apps.png" shape=none]
+		b2a8cd2000464141a08f0d93616793fd [label="App Service" height=1.9 image="C:\Users\heidi.embat\OneDrive - Accenture\Desktop\Python\mix-proxypath\venv\Lib\site-packages\resources/azure/compute\app-services.png" shape=none]
+		f6d30ffc7cde457194c5c034435552a9 [label="SQL Database" height=1.9 image="C:\Users\heidi.embat\OneDrive - Accenture\Desktop\Python\mix-proxypath\venv\Lib\site-packages\resources/azure/database\sql-databases.png" shape=none]
+	}
+	a83a83d33e9a4614874b5f04a4f0d63e [label="App Insights" height=1.9 image="C:\Users\heidi.embat\OneDrive - Accenture\Desktop\Python\mix-proxypath\venv\Lib\site-packages\resources/azure/devops\application-insights.png" shape=none]
+	bb7f2ceda0594d30bfc0620f5ec476c7 -> "2d175c1fd0624605a984fb98dacfd2b7" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"2d175c1fd0624605a984fb98dacfd2b7" -> "9f145a223db7401c9ed7443dd69109c0" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"9f145a223db7401c9ed7443dd69109c0" -> "75d6f340998d49e8adb4449de31171ee" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"75d6f340998d49e8adb4449de31171ee" -> a3c455aa328b4fe7b831e3bfa2ed866d [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	a3c455aa328b4fe7b831e3bfa2ed866d -> "86f51fc68f3e45ae9b5aa3ffeb0ab66b" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	a3c455aa328b4fe7b831e3bfa2ed866d -> "42deef42087a43e89eab2eff2fab735a" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	a3c455aa328b4fe7b831e3bfa2ed866d -> b2a8cd2000464141a08f0d93616793fd [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"42deef42087a43e89eab2eff2fab735a" -> f6d30ffc7cde457194c5c034435552a9 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	b2a8cd2000464141a08f0d93616793fd -> f6d30ffc7cde457194c5c034435552a9 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"2d175c1fd0624605a984fb98dacfd2b7" -> a83a83d33e9a4614874b5f04a4f0d63e [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"42deef42087a43e89eab2eff2fab735a" -> a83a83d33e9a4614874b5f04a4f0d63e [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	b2a8cd2000464141a08f0d93616793fd -> a83a83d33e9a4614874b5f04a4f0d63e [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+}
