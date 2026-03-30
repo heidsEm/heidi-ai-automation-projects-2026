@@ -24,7 +24,7 @@ TEMPLATE_FOLDER_NAME = "EAI-API-APIGEEX-APIPROXY-TEMPLATE"
 BASE_TEMP_DIR = "C:\\temp"
 os.makedirs(BASE_TEMP_DIR, exist_ok=True)
 
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = "TOKEN"
 HEADERS = {
    "Authorization": f"token {GITHUB_TOKEN}",
    "Accept": "application/vnd.github.v3+json"
