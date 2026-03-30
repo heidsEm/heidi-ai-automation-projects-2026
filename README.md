@@ -10,18 +10,6 @@ This repository showcases a variety of automation projects that leverage AI tech
 
 - **Python** (100%) - All projects are written in Python with a focus on maintainability, scalability, and ease of integration.
 
-## Project Structure
-
-The repository is organized as follows:
-
-```
-heidi-ai-automation-projects-2026/
-├── devops/          # DevOps workflow automation scripts
-├── api-ops/         # API operations and integration tools
-├── ai-assisted/     # AI-powered engineering utilities
-└── shared/          # Shared utilities and helpers
-```
-
 ## Getting Started
 
 ### Prerequisites
