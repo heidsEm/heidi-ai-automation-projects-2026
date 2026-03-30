@@ -5,8 +5,8 @@ import requests
 from tqdm import tqdm
 
 # ================= CONFIG =================
-ACCESS_TOKEN = "ya29.a0ATkoCc5TiP0ybtpc03LbWiqEc4p4iuzF_bNsEy2ZwuwEkWIDUhVHxBsxv9-i9Fgwz5aihfHvxAabpHBZ63kM0cQuWAK_o4jY0jkZVqqAnhm_symt7Zf5zclQt6PPEmmK1nI4xwYYtPFofGURNueIQNCuMYsOPaXd87dwAc7AMhDJIWZtiiMN9Jt18aG0d104m46I2NTpj99FtGHFScIvm_x7Faxe_KojIm2I6KQZTMltm6M4cRATcSZMvl15vyQa2PaxGRYbp5RUI_4niNcJhqpEwCAbR8G2JHUAjrsFMIKcMoEQHx6CY1G5hPjD4ka_nAWiC8ZJqymw-5jbWwF_wiiC28O5ICRMW1O6QQaCgYKAXYSARUSFQHGX2MiCzJhYsdWQnfE0uhdwUJcWw0365"
-PROJECT_ID = "gto-eai-apigeex-dev-211f"   # << define the specific project here
+ACCESS_TOKEN = "TOKEN"
+PROJECT_ID = "project_id"   # << define the specific project here
 INPUT_FILE = "emails.xlsx"
 EMAIL_COLUMN = "Email"
 OUTPUT_FILE = "first_log_project.xlsx"
