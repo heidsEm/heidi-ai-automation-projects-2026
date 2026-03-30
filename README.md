@@ -50,11 +50,3 @@ Contributions are welcome! Please follow these guidelines:
 3. Include tests for new functionality
 4. Update relevant documentation
 5. Submit a pull request with a detailed description
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Contact
-
-For questions or feedback, please open an issue or contact the repository maintainer.
